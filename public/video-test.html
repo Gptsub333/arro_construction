@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Test Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    video {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .status {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .info {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+    button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .debug {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Video Test Page</h1>
+    <p>This page tests if your video files can be loaded and played correctly.</p>
+    
+    <h2>WebM Video Test</h2>
+    <video id="webmVideo" controls>
+      <source src="/house-remodeling-new.webm" type="video/webm">
+      Your browser does not support WebM video.
+    </video>
+    <div id="webmStatus" class="status info">Checking WebM video...</div>
+    
+    <h2>MP4 Video Test</h2>
+    <video id="mp4Video" controls>
+      <source src="/house-remodeling.mp4" type="video/mp4">
+      Your browser does not support MP4 video.
+    </video>
+    <div id="mp4Status" class="status info">Checking MP4 video...</div>
+    
+    <div>
+      <button id="playWebm">Play WebM</button>
+      <button id="playMp4">Play MP4</button>
+      <button id="checkSupport">Check Browser Support</button>
+    </div>
+    
+    <div id="debug" class="debug">Debug information will appear here...</div>
+  </div>
+
+  <script>
+    // Elements
+    const webmVideo = document.getElementById('webmVideo');
+    const mp4Video = document.getElementById('mp4Video');
+    const webmStatus = document.getElementById('webmStatus');
+    const mp4Status = document.getElementById('mp4Status');
+    const debug = document.getElementById('debug');
+    
+    // Debug info
+    const debugInfo = {
+      browser: navigator.userAgent,
+      webmSupport: 'Checking...',
+      mp4Support: 'Checking...',
+      webmEvents: [],
+      mp4Events: [],
+      errors: []
+    };
+    
+    // Update debug display
+    function updateDebug() {
+      debug.textContent = JSON.stringify(debugInfo, null, 2);
+    }
+    
+    // Log event
+    function logEvent(videoType, event) {
+      const timestamp = new Date().toISOString();
+      if (videoType === 'webm') {
+        debugInfo.webmEvents.push(`${timestamp}: ${event}`);
+      } else {
+        debugInfo.mp4Events.push(`${timestamp}: ${event}`);
+      }
+      updateDebug();
+    }
+    
+    // Log error
+    function logError(error) {
+      const timestamp = new Date().toISOString();
+      debugInfo.errors.push(`${timestamp}: ${error}`);
+      updateDebug();
+    }
+    
+    // Check browser support
+    document.getElementById('checkSupport').addEventListener('click', () => {
+      const video = document.createElement('video');
+      
+      if (video.canPlayType) {
+        debugInfo.webmSupport = `WebM: ${video.canPlayType('video/webm')}`;
+        debugInfo.mp4Support = `MP4: ${video.canPlayType('video/mp4')}`;
+      } else {
+        debugInfo.webmSupport = 'Video playback not supported';
+        debugInfo.mp4Support = 'Video playback not supported';
+      }
+      
+      updateDebug();
+    });
+    
+    // WebM video events
+    webmVideo.addEventListener('loadstart', () => {
+      logEvent('webm', 'loadstart');
+    });
+    
+    webmVideo.addEventListener('loadedmetadata', () => {
+      logEvent('webm', 'loadedmetadata');
+    });
+    
+    webmVideo.addEventListener('canplay', () => {
+      logEvent('webm', 'canplay');
+      webmStatus.textContent = 'WebM video can play';
+      webmStatus.className = 'status success';
+    });
+    
+    webmVideo.addEventListener('error', () => {
+      const error = webmVideo.error ? `Error: ${webmVideo.error.code} - ${webmVideo.error.message}` : 'Unknown error';
+      logEvent('webm', error);
+      webmStatus.textContent = `WebM video error: ${error}`;
+      webmStatus.className = 'status error';
+    });
+    
+    // MP4 video events
+    mp4Video.addEventListener('loadstart', () => {
+      logEvent('mp4', 'loadstart');
+    });
+    
+    mp4Video.addEventListener('loadedmetadata', () => {
+      logEvent('mp4', 'loadedmetadata');
+    });
+    
+    mp4Video.addEventListener('canplay', () => {
+      logEvent('mp4', 'canplay');
+      mp4Status.textContent = 'MP4 video can play';
+      mp4Status.className = 'status success';
+    });
+    
+    mp4Video.addEventListener('error', () => {
+      const error = mp4Video.error ? `Error: ${mp4Video.error.code} - ${mp4Video.error.message}` : 'Unknown error';
+      logEvent('mp4', error);
+      mp4Status.textContent = `MP4 video error: ${error}`;
+      mp4Status.className = 'status error';
+    });
+    
+    // Play buttons
+    document.getElementById('playWebm').addEventListener('click', () => {
+      try {
+        webmVideo.play()
+          .then(() => {
+            logEvent('webm', 'play successful');
+          })
+          .catch(error => {
+            logEvent('webm', `play failed: ${error.message}`);
+          });
+      } catch (error) {
+        logError(`WebM play error: ${error.message}`);
+      }
+    });
+    
+    document.getElementById('playMp4').addEventListener('click', () => {
+      try {
+        mp4Video.play()
+          .then(() => {
+            logEvent('mp4', 'play successful');
+          })
+          .catch(error => {
+            logEvent('mp4', `play failed: ${error.message}`);
+          });
+      } catch (error) {
+        logError(`MP4 play error: ${error.message}`);
+      }
+    });
+    
+    // Initial debug update
+    updateDebug();
+    
+    // Check file existence
+    fetch('/house-remodeling-new.webm', { method: 'HEAD' })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`WebM file not found: ${response.status}`);
+        }
+        logEvent('webm', 'File exists on server');
+      })
+      .catch(error => {
+        logError(`WebM file check: ${error.message}`);
+      });
+      
+    fetch('/house-remodeling.mp4', { method: 'HEAD' })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`MP4 file not found: ${response.status}`);
+        }
+        logEvent('mp4', 'File exists on server');
+      })
+      .catch(error => {
+        logError(`MP4 file check: ${error.message}`);
+      });
+  </script>
+</body>
+</html>
