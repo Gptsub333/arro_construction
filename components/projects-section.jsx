@@ -55,16 +55,13 @@ export default function ProjectsSection({ limit = 3 }) {
   const [activeCategory, setActiveCategory] = useState("All")
 
   const categories = ["All", ...new Set(projects.map((project) => project.category))]
-
-  // Filter projects based on active category
   const filteredProjects =
     activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
 
-  // If limit is provided, only show that many projects
   const displayedProjects = limit ? filteredProjects.slice(0, limit) : filteredProjects
 
   return (
-    <section className="section">
+    <section className="section bg-gray-50">
       <div className="container">
         <AnimationWrapper animation="animate-fade-in" threshold={0.2}>
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -95,20 +92,30 @@ export default function ProjectsSection({ limit = 3 }) {
           </AnimationWrapper>
         )}
 
-        <StaggeredChildren baseAnimation="animate-zoom-in" staggerDelay={0.15} threshold={0.1}>
-          <div className="project-grid">
+        <StaggeredChildren baseAnimation="animate-slide-up" staggerDelay={0.15} threshold={0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayedProjects.map((project) => (
-              <div key={project.id} className="project-card">
-                <Image src={project.image || "/placeholder.svg"} alt={project.title} width={600} height={400} />
-                <div className="project-overlay">
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-                    <p className="text-sm mb-3">{project.category}</p>
-                    <p>{project.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+  <div key={project.id} className="bg-white rounded-lg shadow p-4 hover:shadow-md transition duration-300">
+    <div className="relative h-64 mb-4 overflow-hidden">
+      <Image
+        src={project.image || "/placeholder.svg"}
+        alt={project.title}
+        fill
+        className="rounded-lg object-cover"
+      />
+    </div>
+    <h3 className="text-lg font-semibold">{project.title}</h3>
+    <p className="text-sm text-gray-500 mb-1">{project.category}</p>
+    <p className="text-gray-600 mb-4">{project.description}</p>
+    <Link
+      href={`/projects`}
+      className="text-sm text-[rgb(var(--primary))] font-medium inline-flex items-center hover:underline"
+    >
+      Learn More <span className="ml-1">→</span>
+    </Link>
+  </div>
+))}
+
           </div>
         </StaggeredChildren>
 
