@@ -55,7 +55,8 @@ export default function Navbar() {
             transition: "transform 0.5s ease, opacity 0.5s ease, color 0.5s ease",
           }}
         >
-          Arro Construction LLC
+          <img src="/p1.png" alt="Arro" className="h-[60px] w-[148px]"/>
+          {/* Arro Construction LLC */}
         </Link>
 
         {/* Desktop Navigation */}

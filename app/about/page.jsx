@@ -21,17 +21,12 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="section">
+      <section className="section bg-gray-50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimationWrapper animation="animate-slide-right" threshold={0.2}>
-              <div className="relative h-[500px] rounded-lg overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=1000&width=800&query=construction worker in modern home"
-                  alt="Our Story"
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative h-[202px] w-[500px] rounded-lg overflow-hidden">
+                <Image src="/p1.png" alt="Our Story" fill className="object cover" />
               </div>
             </AnimationWrapper>
             <div>
@@ -75,81 +70,106 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team */}
-      <section className="section bg-gray-50">
+      <StaggeredChildren baseAnimation="animate-slide-up" staggerDelay={0.2} threshold={0.1}>
+      {/* Leadership Profile */}
+      <section className="section">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <AnimationWrapper animation="animate-slide-right" threshold={0.2}>
+              <div className="relative h-[545px] w-[550px] rounded-lg overflow-hidden">
+                <Image
+                  src="/p2.png"
+                  alt="Ari Rozen - Founder, ARRO Construction"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </AnimationWrapper>
+            <div>
+              <AnimationWrapper animation="animate-slide-left" threshold={0.2}>
+                <h2 className="text-3xl font-bold mb-2">Ari Rozen</h2>
+                <h3 className="text-xl text-[rgb(var(--primary))] font-semibold mb-6">Founder, ARRO Construction</h3>
+
+                <div className="space-y-4 text-gray-600">
+                  <p>
+                    Ari leads ARRO Construction with over a decade of experience in residential and multifamily
+                    construction, bringing a strong foundation in field operations, project management, and client
+                    service. As founder, Ari oversees the company's day-to-day operations, long-term strategy, and
+                    commitment to delivering high-quality remodeling and renovation services across Central Texas and
+                    Florida.
+                  </p>
+
+                  <p>
+                    Ari began his construction career as a field engineer and advanced into a superintendent role, where
+                    he managed large-scale multifamily developments and oversaw teams through complex buildouts from the
+                    ground up. Ari brings a hands-on approach while delivering projects on time and with integrity. In
+                    2022, he launched ARRO Construction with a focus on quality craftsmanship, clear communication, and
+                    customer satisfaction.
+                  </p>
+
+                  <p>
+                    Since founding the company, Ari has expanded ARRO's portfolio to include full home remodels,
+                    accessory dwelling unit (ADU) conversions, and value-add renovations for homeowners, investors, and
+                    property managers. His leadership style blends technical expertise with a personal, solutions-driven
+                    approach to project delivery.
+                  </p>
+
+                  <p>
+                    Ari is committed to building lasting client relationships, mentoring the next generation of
+                    tradespeople, and contributing to the long-term improvement of the communities ARRO serves.
+                  </p>
+                </div>
+              </AnimationWrapper>
+            </div>
+          </div>
+        </div>
+      </section>
+       </StaggeredChildren>
+
+       <section className="section bg-gray-50">
         <div className="container">
           <AnimationWrapper animation="animate-fade-in" threshold={0.2}>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="mb-4">Meet Our Team</h2>
-              <p className="text-gray-600">
-                Our team of experienced professionals is dedicated to bringing your vision to life with quality
-                craftsmanship and attention to detail.
-              </p>
+              <h2 className="mb-4">CORE VALUES (STRONG)</h2>
             </div>
           </AnimationWrapper>
 
-          <StaggeredChildren baseAnimation="animate-slide-up" staggerDelay={0.2} threshold={0.1}>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md transform transition-all duration-300 hover:scale-105">
-                <div className="relative h-80">
-                  <Image
-                    src="/placeholder.svg?height=800&width=600&query=professional construction manager portrait"
-                    alt="John Arro"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">John Arro</h3>
-                  <p className="text-[rgb(var(--primary))] mb-4">Founder & CEO</p>
-                  <p className="text-gray-600">
-                    With over 20 years of experience in the construction industry, John leads our team with a passion
-                    for quality and customer satisfaction.
-                  </p>
-                </div>
+          <StaggeredChildren baseAnimation="animate-slide-up" staggerDelay={0.1} threshold={0.1}>
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-[rgb(var(--primary))]">S – Solve Problems with Purpose</h3>
+                <p className="text-gray-600">Approach challenges creatively and deliver meaningful solutions.</p>
               </div>
 
-              <div className="bg-white rounded-lg overflow-hidden shadow-md transform transition-all duration-300 hover:scale-105">
-                <div className="relative h-80">
-                  <Image
-                    src="/placeholder.svg?height=800&width=600&query=female interior designer professional"
-                    alt="Sarah Johnson"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Sarah Johnson</h3>
-                  <p className="text-[rgb(var(--primary))] mb-4">Lead Designer</p>
-                  <p className="text-gray-600">
-                    Sarah brings creativity and innovation to every project, helping clients visualize and achieve their
-                    dream spaces.
-                  </p>
-                </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-[rgb(var(--primary))]">T – Team First</h3>
+                <p className="text-gray-600">Prioritize collaboration, support, and shared success.</p>
               </div>
 
-              <div className="bg-white rounded-lg overflow-hidden shadow-md transform transition-all duration-300 hover:scale-105">
-                <div className="relative h-80">
-                  <Image
-                    src="/placeholder.svg?height=800&width=600&query=construction project manager professional"
-                    alt="Michael Chen"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">Michael Chen</h3>
-                  <p className="text-[rgb(var(--primary))] mb-4">Project Manager</p>
-                  <p className="text-gray-600">
-                    Michael ensures that every project runs smoothly, on time, and on budget, with clear communication
-                    throughout the process.
-                  </p>
-                </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-[rgb(var(--primary))]">R – Resilient in Adversity</h3>
+                <p className="text-gray-600">Adapt, persevere, and thrive under pressure.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-[rgb(var(--primary))]">O – Operate with Excellence</h3>
+                <p className="text-gray-600">Maintain high standards and attention to detail in every task.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-[rgb(var(--primary))]">N – Nurture Growth</h3>
+                <p className="text-gray-600">Invest in learning, development, and empowering others.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md hover:bg-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-[rgb(var(--primary))]">G – Go Above and Beyond</h3>
+                <p className="text-gray-600">Exceed expectations and deliver exceptional value.</p>
               </div>
             </div>
           </StaggeredChildren>
         </div>
       </section>
+
 
       {/* Our Values */}
       <section className="section">

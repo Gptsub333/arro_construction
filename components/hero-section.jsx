@@ -84,15 +84,14 @@ export default function HeroSection() {
           <AnimationWrapper animation="animate-slide-down" delay={0.3}>
             <div className="text-reveal mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="inline-block pb-1">Transform Your Living Space</span>
+                <span className="inline-block pb-1">Your Project,<br/> Our Passion</span>
               </h1>
             </div>
           </AnimationWrapper>
 
           <AnimationWrapper animation="animate-slide-up" delay={0.6}>
             <p className="text-lg md:text-xl mb-8 max-w-2xl">
-              Award-winning home remodeling services tailored to your vision and budget. From concept to completion, we
-              bring your dreams to life.
+              "We build with purpose, precision and pride at every phase of your project." 
             </p>
           </AnimationWrapper>
 

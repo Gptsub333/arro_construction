@@ -68,26 +68,24 @@ export default function ProjectsPage() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Complete Home Transformation</h3>
               <p className="text-gray-600 mb-4">
-                This project involved a complete renovation of a 1970s home, including the kitchen, bathrooms, living
-                areas, and exterior. The homeowners wanted to modernize their space while maintaining the character of
-                the original home.
+                We converted a detached garage into a beautifully finished 1-bedroom, 1-bathroom accessory dwelling unit (ADU) to create a private living space for our client's father-in-law. This full-scope remodel included structural modifications, new utilities, insulation, HVAC, drywall, custom cabinetry, flooring, and interior finishes. The result is a fully self-contained, comfortable home that blends functionality, style, and independence-perfectly tailored to meet the family's needs.
               </p>
               <div className="space-y-6 mb-8">
                 <div>
                   <h4 className="font-bold mb-2">Project Scope:</h4>
                   <ul className="list-disc pl-5 text-gray-600 space-y-1">
-                    <li>Complete kitchen remodel with custom cabinetry</li>
-                    <li>Master bathroom renovation with walk-in shower</li>
-                    <li>Guest bathroom update</li>
-                    <li>Open concept living area creation</li>
-                    <li>New flooring throughout</li>
-                    <li>Updated lighting and fixtures</li>
-                    <li>Fresh paint inside and out</li>
+                    <li>Framing and layout modifications to accomodate living, kitchen, and bathroom areas</li>
+                    <li>Full electrical and plumbing installation, including new sub-panel and sewer tie-in</li>
+                    <li>HVAC system installation for year-round climate control</li>
+                    <li>Insulation, drywall, and interior wall finishes</li>
+                    <li>Custom kitchen cabinetry and bathroom vanity installation</li>
+                    <li>Flooring throughout living spaces and wet areas</li>
+                    <li>Interior/exterior paint, trim, and finish carpentry</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-bold mb-2">Timeline:</h4>
-                  <p className="text-gray-600">12 weeks from start to completion</p>
+                  <p className="text-gray-600">3 months from start to completion</p>
                 </div>
                 <div>
                   <h4 className="font-bold mb-2">Client Feedback:</h4>

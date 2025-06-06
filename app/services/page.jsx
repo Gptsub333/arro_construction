@@ -146,37 +146,31 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimationWrapper animation="animate-slide-right" threshold={0.2}>
               <div>
-                <h2 className="mb-4">Basement Finishing</h2>
+                <h2 className="mb-4">Full Home remodel</h2>
                 <p className="text-gray-600 mb-4">
-                  Convert your underutilized basement into valuable living space with our basement finishing services.
-                  Whether you're looking to create an entertainment room, home office, guest suite, or gym, we can help
-                  you maximize your basement's potential.
+                  Transform your entire living space with our comprehensive full home remodeling services. From concept to completion, we manage every detail - including structural modifications, layout changes, and high-end finishes to deliver a seamless renovation experience. Whether you're updating an older home or reimagining your current layout, we ensure quality craftsmanship, clear communication, and a result that reflects your lifestyle and vision.
                 </p>
-                <p className="text-gray-600 mb-6">Our basement finishing services include:</p>
+                <p className="text-gray-600 mb-6">Our full home remodels typically include:</p>
                 <ul className="space-y-2 mb-8">
                   <li className="flex items-start">
                     <span className="text-[rgb(var(--primary))] mr-2">•</span>
-                    <span>Framing and drywall installation</span>
+                    <span>Interior and exterior painting</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[rgb(var(--primary))] mr-2">•</span>
-                    <span>Flooring installation</span>
+                    <span>Flooring installation (hardwood, tile, vinyl, etc)</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[rgb(var(--primary))] mr-2">•</span>
-                    <span>Ceiling installation</span>
+                    <span>Drywall installation and repair</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[rgb(var(--primary))] mr-2">•</span>
-                    <span>Lighting and electrical work</span>
+                    <span>Custom built-ins and repair</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[rgb(var(--primary))] mr-2">•</span>
-                    <span>Bathroom addition</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[rgb(var(--primary))] mr-2">•</span>
-                    <span>Home theater installation</span>
+                    <span>Kitchen and bathroom upgrades</span>
                   </li>
                 </ul>
                 <Link href="/contact" className="btn btn-primary">

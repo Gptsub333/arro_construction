@@ -21,9 +21,9 @@ const services = [
   },
   {
     id: "basement",
-    title: "Basement Finishing",
+    title: "Full Home Remodel",
     description:
-      "Convert your underutilized basement into valuable living space, from entertainment rooms to home offices or guest suites.",
+      "Transform your home with our full remodeling services—seamless upgrades, custom layouts, and quality finishes tailored to your lifestyle.",
     image: "/finished-basement-entertainment.png",
   },
   {

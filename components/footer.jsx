@@ -84,7 +84,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link href="/services#basement" className="hover:text-[rgb(var(--primary))] transition-colors">
-                      Basement Finishing
+                      Full Home Remodel
                     </Link>
                   </li>
                   <li>
