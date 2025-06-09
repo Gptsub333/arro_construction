@@ -9,52 +9,46 @@ import StaggeredChildren from "./staggered-children"
 const projects = [
   {
     id: 1,
-    title: "Modern Kitchen Transformation",
-    category: "Kitchen",
-    description: "Complete renovation of an outdated kitchen into a modern, functional space.",
-    image: "/placeholder.svg?height=600&width=800&query=modern kitchen renovation after",
+    title: "Georgetown",
+    location: "Georgetown",
+    category: "Kitchen Remodel Home Remodel",
+    description: "Complete renovation of the kitchen, including new cabinetry, countertops, lighting, and flooring to modernize the space.",
+    image: "/p3.png",
   },
   {
     id: 2,
-    title: "Luxury Master Bathroom",
-    category: "Bathroom",
-    description: "Spa-like master bathroom with custom tile work and premium fixtures.",
-    image: "/placeholder.svg?height=600&width=800&query=luxury bathroom with walk-in shower",
+    title: "Austin",
+    location: "Austin",
+    category: "Home Remodel, Kitchen Remodel, Deck Repair, Apartment Water Damage Restoration",
+    description: "Full interior remodel featuring updated stairs, flooring, paint, and improved layout for better functionality.",
+    image: "/p4.png",
   },
   {
     id: 3,
-    title: "Open Concept Living Space",
-    category: "Whole Home",
-    description: "Removal of walls to create a spacious, open-concept living area.",
-    image: "/placeholder.svg?height=600&width=800&query=open concept living room and kitchen",
+    title: "Buda",
+    location: "Buda",
+    category: "Attached Detached Unit-ADU Remodel",
+    description: "Renovated existing ADU to improve livability and design, including new finishes, fixtures, and mechanical upgrades.",
+    image: "/p5.png",
   },
   {
     id: 4,
-    title: "Entertainment Basement",
-    category: "Basement",
-    description: "Finished basement with home theater and game room.",
-    image: "/placeholder.svg?height=600&width=800&query=basement home theater and game room",
-  },
-  {
-    id: 5,
-    title: "Outdoor Living Oasis",
-    category: "Outdoor",
-    description: "Custom deck and patio with outdoor kitchen and fire pit.",
-    image: "/placeholder.svg?height=600&width=800&query=outdoor patio with kitchen and fire pit",
-  },
-  {
-    id: 6,
-    title: "Second Story Addition",
-    category: "Additions",
-    description: "Addition of a second story with three bedrooms and two bathrooms.",
-    image: "/placeholder.svg?height=600&width=800&query=home with second story addition",
+    title: "San Antonio",
+    location: "San Antonio",
+    category: "Breezeway Solid Stain Install",
+    description: "Applied solid stain to apartment breezeways for improved appearance and long-term protection against weathering and foot traffic.",
+    image: "/placeholder.svg?height=600&width=800",
   },
 ]
 
-export default function ProjectsSection({ limit = 3 }) {
+export default function ProjectsSection({ limit = 4 }) {
   const [activeCategory, setActiveCategory] = useState("All")
 
+  // Get unique categories and locations
   const categories = ["All", ...new Set(projects.map((project) => project.category))]
+  const locations = ["All Locations", ...new Set(projects.map((project) => project.location))]
+  
+  // Filter projects based on active category
   const filteredProjects =
     activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
 
@@ -93,29 +87,35 @@ export default function ProjectsSection({ limit = 3 }) {
         )}
 
         <StaggeredChildren baseAnimation="animate-slide-up" staggerDelay={0.15} threshold={0.1}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {displayedProjects.map((project) => (
-  <div key={project.id} className="bg-white rounded-lg shadow p-4 hover:shadow-md transition duration-300">
-    <div className="relative h-64 mb-4 overflow-hidden">
-      <Image
-        src={project.image || "/placeholder.svg"}
-        alt={project.title}
-        fill
-        className="rounded-lg object-cover"
-      />
-    </div>
-    <h3 className="text-lg font-semibold">{project.title}</h3>
-    <p className="text-sm text-gray-500 mb-1">{project.category}</p>
-    <p className="text-gray-600 mb-4">{project.description}</p>
-    <Link
-      href={`/projects`}
-      className="text-sm text-[rgb(var(--primary))] font-medium inline-flex items-center hover:underline"
-    >
-      Learn More <span className="ml-1">→</span>
-    </Link>
-  </div>
-))}
-
+              <div key={project.id} className="bg-white rounded-lg shadow p-4 hover:shadow-md transition duration-300">
+                <div className="relative h-64 mb-4 overflow-hidden">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className="rounded-lg object-cover"
+                  />
+                </div>
+                <div className="mb-2">
+                  {/* <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2">
+                    {project.location}
+                  </span> */}
+                  <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">
+                    {project.category}
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+                <Link
+                  href={`/projects`}
+                  className="text-sm text-[rgb(var(--primary))] font-medium inline-flex items-center hover:underline"
+                >
+                  Learn More <span className="ml-1">→</span>
+                </Link>
+              </div>
+            ))}
           </div>
         </StaggeredChildren>
 

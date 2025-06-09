@@ -91,7 +91,7 @@ export default function Home() {
 
       <ServicesSection limit={3} />
 
-      <ProjectsSection limit={3} />
+      <ProjectsSection limit={4} />
 
       {/* Process Section */}
       <section className="section bg-gray-50">
