@@ -37,7 +37,7 @@ const locationImages = {
   austin: [
     { id: 1, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "Austin project image 1" },
     { id: 2, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0037.webp", alt: "Austin project image 2" },
-    { id: 3, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0038.webp", alt: "Austin project image 3" },
+    { id: 3, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0038.jpg", alt: "Austin project image 3" },
     { id: 4, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0039.webp", alt: "Austin project image 4" },
     { id: 5, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0040.webp", alt: "Austin project image 5" },
     { id: 6, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0041.webp", alt: "Austin project image 6" },

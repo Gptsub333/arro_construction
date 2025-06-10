@@ -11,8 +11,9 @@ const projects = [
     id: 1,
     title: "Georgetown",
     location: "Georgetown",
-    category: "Kitchen Remodel Home Remodel",
-    description: "Complete renovation of the kitchen, including new cabinetry, countertops, lighting, and flooring to modernize the space.",
+    category: "Kitchen Remodel, Home Remodel",
+    description:
+      "Complete renovation of the kitchen, including new cabinetry, countertops, lighting, and flooring to modernize the space.",
     image: "/p3.png",
   },
   {
@@ -20,7 +21,8 @@ const projects = [
     title: "Austin",
     location: "Austin",
     category: "Home Remodel, Kitchen Remodel, Deck Repair, Apartment Water Damage Restoration",
-    description: "Full interior remodel featuring updated stairs, flooring, paint, and improved layout for better functionality.",
+    description:
+      "Full interior remodel featuring updated stairs, flooring, paint, and improved layout for better functionality.",
     image: "/p4.png",
   },
   {
@@ -28,7 +30,8 @@ const projects = [
     title: "Buda",
     location: "Buda",
     category: "Attached Detached Unit-ADU Remodel",
-    description: "Renovated existing ADU to improve livability and design, including new finishes, fixtures, and mechanical upgrades.",
+    description:
+      "Renovated existing ADU to improve livability and design, including new finishes, fixtures, and mechanical upgrades.",
     image: "/p5.png",
   },
   {
@@ -36,23 +39,27 @@ const projects = [
     title: "San Antonio",
     location: "San Antonio",
     category: "Breezeway Solid Stain Install",
-    description: "Applied solid stain to apartment breezeways for improved appearance and long-term protection against weathering and foot traffic.",
+    description:
+      "Applied solid stain to apartment breezeways for improved appearance and long-term protection against weathering and foot traffic.",
     image: "/placeholder.svg?height=600&width=800",
   },
 ]
 
-export default function ProjectsSection({ limit = 4 }) {
+export default function ProjectsSection({ limit }) {
   const [activeCategory, setActiveCategory] = useState("All")
+
+  // Set default limit if not provided
+  const projectLimit = limit || 4
 
   // Get unique categories and locations
   const categories = ["All", ...new Set(projects.map((project) => project.category))]
   const locations = ["All Locations", ...new Set(projects.map((project) => project.location))]
-  
+
   // Filter projects based on active category
   const filteredProjects =
     activeCategory === "All" ? projects : projects.filter((project) => project.category === activeCategory)
 
-  const displayedProjects = limit ? filteredProjects.slice(0, limit) : filteredProjects
+  const displayedProjects = projectLimit ? filteredProjects.slice(0, projectLimit) : filteredProjects
 
   return (
     <section className="section bg-gray-50">
@@ -66,7 +73,7 @@ export default function ProjectsSection({ limit = 4 }) {
           </div>
         </AnimationWrapper>
 
-        {!limit && (
+        {!projectLimit && (
           <AnimationWrapper animation="animate-slide-up" threshold={0.2}>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
@@ -98,13 +105,15 @@ export default function ProjectsSection({ limit = 4 }) {
                     className="rounded-lg object-cover"
                   />
                 </div>
-                <div className="mb-2">
-                  {/* <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2">
-                    {project.location}
-                  </span> */}
-                  <span className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">
-                    {project.category}
-                  </span>
+                <div className="mb-2 flex flex-wrap gap-2">
+                  {project.category.split(", ").map((cat, index) => (
+                    <span
+                      key={index}
+                      className="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700"
+                    >
+                      {cat.trim()}
+                    </span>
+                  ))}
                 </div>
                 <h3 className="text-lg font-semibold">{project.title}</h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
@@ -119,7 +128,7 @@ export default function ProjectsSection({ limit = 4 }) {
           </div>
         </StaggeredChildren>
 
-        {limit && (
+        {projectLimit && (
           <AnimationWrapper animation="animate-fade-in" delay={0.5} threshold={0.2}>
             <div className="text-center mt-12">
               <Link href="/projects" className="btn btn-outline">
