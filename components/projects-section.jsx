@@ -37,7 +37,7 @@ const projects = [
     location: "San Antonio",
     category: "Breezeway Solid Stain Install",
     description: "Applied solid stain to apartment breezeways for improved appearance and long-term protection against weathering and foot traffic.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/other-remodeling.webp",
   },
 ]
 

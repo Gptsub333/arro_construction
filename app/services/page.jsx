@@ -71,7 +71,7 @@ export default function ServicesPage() {
             <AnimationWrapper animation="animate-slide-left" threshold={0.2}>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=1000&width=800&query=luxury modern kitchen with island"
+                  src="/kitchen-remodeling.webp"
                   alt="Kitchen Remodeling"
                   fill
                   className="object-cover"
@@ -89,7 +89,7 @@ export default function ServicesPage() {
               <div className="order-2 md:order-1">
                 <div className="relative h-[500px] rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=1000&width=800&query=luxury bathroom with walk-in shower"
+                    src="/bathroom-remodeling.webp"
                     alt="Bathroom Renovation"
                     fill
                     className="object-cover"

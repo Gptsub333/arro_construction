@@ -37,7 +37,7 @@ const locationImages = {
   austin: [
     { id: 1, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "Austin project image 1" },
     { id: 2, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0037.webp", alt: "Austin project image 2" },
-    { id: 3, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0038.webp", alt: "Austin project image 3" },
+    { id: 3, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0040.webp", alt: "Austin project image 3" },
     { id: 4, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0039.webp", alt: "Austin project image 4" },
     { id: 5, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0040.webp", alt: "Austin project image 5" },
     { id: 6, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0041.webp", alt: "Austin project image 6" },
@@ -68,21 +68,19 @@ const locationImages = {
     { id: 22, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0065.webp", alt: "Buda project image 22" }
   ],
   sanantonio: [
-    { id: 1, src: "/s1.jpg", alt: "San Antonio project image 1" },
-    { id: 2, src: "/s2.jpg", alt: "San Antonio project image 2" },
-    { id: 3, src: "/s3.jpg", alt: "San Antonio project image 3" },
-    { id: 4, src: "/s4.jpg", alt: "San Antonio project image 4" },
-    { id: 5, src: "/s5.jpg", alt: "San Antonio project image 5" },
-    { id: 6, src: "/s6.jpg", alt: "San Antonio project image 6" },
-    { id: 7, src: "/s7.jpg", alt: "San Antonio project image 7" },
-    { id: 8, src: "/s8.jpg", alt: "San Antonio project image 8" },
-    { id: 9, src: "/s9.jpg", alt: "San Antonio project image 9" },
-    { id: 10, src: "/s10.jpg", alt: "San Antonio project image 10" },
-    { id: 11, src: "/s11.jpg", alt: "San Antonio project image 11" },
-    { id: 12, src: "/s12.jpg", alt: "San Antonio project image 12" },
-    { id: 13, src: "/s13.jpg", alt: "San Antonio project image 13" },
-    { id: 14, src: "/s14.jpg", alt: "San Antonio project image 14" },
-    { id: 15, src: "/s15.jpg", alt: "San Antonio project image 15" }
+    { id: 1, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0063.webp", alt: "San Antonio project image 1" },
+    { id: 2, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "San Antonio project image 2" },
+    { id: 5, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0044.webp", alt: "San Antonio project image 5" },
+    { id: 6, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "San Antonio project image 6" },
+    { id: 7, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0039.webp", alt: "San Antonio project image 7" },
+    { id: 8, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "San Antonio project image 8" },
+    { id: 9, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0039.webp", alt: "San Antonio project image 9" },
+    { id: 10, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0044.webp", alt: "San Antonio project image 10" },
+    { id: 11, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0044.webp", alt: "San Antonio project image 11" },
+    { id: 12, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "San Antonio project image 12" },
+    { id: 13, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0044.webp", alt: "San Antonio project image 13" },
+    { id: 14, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "San Antonio project image 14" },
+    { id: 15, src: "/ilovepdf_pages-to-jpg/WEBSITE NOTES-compressed_page-0036.webp", alt: "San Antonio project image 15" }
   ]
 }
 
@@ -269,33 +267,41 @@ export default function ProjectsPage() {
             <div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-64 rounded-lg overflow-hidden">
-                  <img
-                    src="/placeholder.svg?height=600&width=400"
+                  <Image
+                    src="/modern-home-construction.png"
                     alt="Before"
+                    width={300}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-70 text-white px-4 py-2">Before</div>
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
-                  <img
-                    src="/placeholder.svg?height=600&width=400"
+                  <Image
+                    src="/open-concept-living-kitchen.png"
                     alt="After"
+                    width={300}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 bg-[rgb(var(--primary))] text-white px-4 py-2">After</div>
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
-                  <img
-                    src="/placeholder.svg?height=600&width=400"
+                  <Image
+                    src="/bathroom-remodeling.webp"
                     alt="Before"
+                    width={300}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 bg-black bg-opacity-70 text-white px-4 py-2">Before</div>
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
-                  <img
-                    src="/placeholder.svg?height=600&width=400"
+                  <Image
+                    src="/finished-basement-entertainment.png"
                     alt="After"
+                    width={300}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 bg-[rgb(var(--primary))] text-white px-4 py-2">After</div>
