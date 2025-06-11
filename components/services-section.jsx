@@ -19,7 +19,7 @@ const services = [
       "Transform your bathroom into a luxurious spa-like retreat with modern fixtures, elegant tilework, and efficient layouts that maximize your space.",
     image: "/luxury-bathroom-renovation.png",
   },
-  {
+  { 
     id: "basement",
     title: "Full Home Remodel",
     description:
@@ -72,7 +72,7 @@ export default function ServicesSection({ limit = 3 }) {
               <div key={service.id} className="service-card">
                 <div className="relative h-64 mb-4 overflow-hidden">
                   <Image
-                    src={service.image || "/placeholder.svg"}
+                    src={service.image}
                     alt={service.title}
                     fill
                     className="rounded-lg object-cover"

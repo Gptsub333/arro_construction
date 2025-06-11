@@ -12,7 +12,7 @@ const testimonials = [
     location: "Seattle, WA",
     quote:
       "Arro Construction transformed our outdated kitchen into a stunning, functional space that has become the heart of our home. Their attention to detail and craftsmanship exceeded our expectations.",
-    image: "/placeholder.svg?height=100&width=100&query=professional woman headshot",
+    image: "/person-girl-1.webp",
     rating: 5,
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     location: "Bellevue, WA",
     quote:
       "We hired Arro for our bathroom renovation and couldn't be happier with the results. The team was professional, punctual, and kept us informed throughout the entire process.",
-    image: "/placeholder.svg?height=100&width=100&query=professional man headshot",
+    image: "/person-man-1.webp",
     rating: 5,
   },
   {
@@ -30,7 +30,7 @@ const testimonials = [
     location: "Tacoma, WA",
     quote:
       "Our basement finishing project was completed on time and on budget. The Arro team provided creative solutions to maximize our space and the quality of work is outstanding.",
-    image: "/placeholder.svg?height=100&width=100&query=young woman casual portrait",
+    image: "/person-girl-1.webp",
     rating: 5,
   },
 ]

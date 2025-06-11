@@ -9,7 +9,8 @@ import { CheckCircle, Award, Clock, Users } from "lucide-react"
 import AnimationWrapper from "@/components/animation-wrapper"
 import StaggeredChildren from "@/components/staggered-children"
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <>
       <HeroSection />
@@ -21,9 +22,10 @@ export default function Home() {
             <AnimationWrapper animation="animate-slide-right" threshold={0.2}>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=1000&width=800&query=construction worker in modern home"
+                  src="/home-remodeling.webp"
+                  width={700}
+                  height={400}
                   alt="About Arro Construction"
-                  fill
                   className="object-cover"
                 />
               </div>
