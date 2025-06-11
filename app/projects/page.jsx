@@ -111,6 +111,7 @@ function LocationSection({ title, description, images, locationKey }) {
               <Image
                 src={images[0].src || "/placeholder.svg"}
                 alt={images[0].alt}
+                loading="lazy"
                 fill
                 className="object-cover"
               />
@@ -133,6 +134,7 @@ function LocationSection({ title, description, images, locationKey }) {
                 <Image
                   src={images[currentImageIndex].src || "/placeholder.svg"}
                   alt={images[currentImageIndex].alt}
+                  loading="lazy"
                   fill
                   className="object-cover"
                 />
@@ -178,6 +180,7 @@ function LocationSection({ title, description, images, locationKey }) {
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
+                    loading="lazy"
                     fill
                     className="object-cover"
                   />
@@ -270,6 +273,7 @@ export default function ProjectsPage() {
                   <Image
                     src="/modern-home-construction.png"
                     alt="Before"
+                    loading="lazy"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
@@ -280,6 +284,7 @@ export default function ProjectsPage() {
                   <Image
                     src="/open-concept-living-kitchen.png"
                     alt="After"
+                    loading="lazy"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
@@ -290,6 +295,7 @@ export default function ProjectsPage() {
                   <Image
                     src="/bathroom-remodeling.webp"
                     alt="Before"
+                    loading="lazy"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
@@ -300,6 +306,7 @@ export default function ProjectsPage() {
                   <Image
                     src="/finished-basement-entertainment.png"
                     alt="After"
+                    loading="lazy"
                     width={300}
                     height={300}
                     className="w-full h-full object-cover"
