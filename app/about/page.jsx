@@ -26,7 +26,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimationWrapper animation="animate-slide-right" threshold={0.2}>
               <div className="relative h-[202px] w-[500px] rounded-lg overflow-hidden">
-                <Image src="/p1.png" alt="Our Story" fill className="object cover" />
+                <Image src="/p1.png" loading="lazy" alt="Our Story" fill className="object cover" />
               </div>
             </AnimationWrapper>
             <div>
@@ -79,6 +79,7 @@ export default function AboutPage() {
               <div className="relative h-[545px] w-[550px] rounded-lg overflow-hidden">
                 <Image
                   src="/p2.png"
+                  loading="lazy"
                   alt="Ari Rozen - Founder, ARRO Construction"
                   fill
                   className="object-cover"

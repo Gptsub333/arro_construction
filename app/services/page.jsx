@@ -3,6 +3,9 @@ import CTASection from "@/components/cta-section"
 import Image from "next/image"
 import Link from "next/link"
 import AnimationWrapper from "@/components/animation-wrapper"
+import kitchenRemodeling from "@/public/kitchen-remodeling.webp"
+import bathroomRemodeling from "@/public/bathroom-remodeling.webp"
+import finishedBasementEntertainment from "@/public/finished-basement-entertainment.png"
 
 export default function ServicesPage() {
   return (
@@ -70,12 +73,15 @@ export default function ServicesPage() {
             </AnimationWrapper>
             <AnimationWrapper animation="animate-slide-left" threshold={0.2}>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
-                <Image
-                  src="/kitchen-remodeling.webp"
-                  alt="Kitchen Remodeling"
-                  fill
-                  className="object-cover"
-                />
+                  <Image
+                    placeholder="blur"
+                    src={kitchenRemodeling}
+                    // src="/kitchen-remodeling.webp"
+                    loading="lazy" 
+                    alt="Kitchen Remodeling"
+                    fill
+                    className="object-cover"
+                  />
               </div>
             </AnimationWrapper>
           </div>
@@ -89,7 +95,10 @@ export default function ServicesPage() {
               <div className="order-2 md:order-1">
                 <div className="relative h-[500px] rounded-lg overflow-hidden">
                   <Image
-                    src="/bathroom-remodeling.webp"
+                    // src="/bathroom-remodeling.webp"
+                    placeholder="blur"
+                    src={bathroomRemodeling}
+                    loading="lazy" 
                     alt="Bathroom Renovation"
                     fill
                     className="object-cover"
@@ -181,7 +190,7 @@ export default function ServicesPage() {
             <AnimationWrapper animation="animate-slide-left" threshold={0.2}>
               <div>
                 <div className="relative h-[500px] rounded-lg overflow-hidden">
-                  <Image src="/finished-basement-entertainment.png" alt="Basement Finishing" fill className="object-cover" />
+                  <Image src={finishedBasementEntertainment} loading="lazy" placeholder="blur" alt="Basement Finishing" fill className="object-cover" />
                 </div>
               </div>
             </AnimationWrapper>
