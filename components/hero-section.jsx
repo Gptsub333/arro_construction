@@ -68,7 +68,7 @@ export default function HeroSection() {
           style={{ zIndex: 1 }}
         >
           {/* Using the exact source tag format requested */}
-          <source src="/house-remodeling.webm" type="video/webm" />
+          <source src="/background_video.webm" type="video/webm" />
           {/* Adding WebM as a fallback */}
           <source src="/videos/house-remodeling-new.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -82,7 +82,7 @@ export default function HeroSection() {
       <div className="container relative z-10 text-white">
         <div className="max-w-3xl">
           <AnimationWrapper animation="animate-slide-down" delay={0.3}>
-            <div className="text-reveal mb-6">
+            <div className="mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="inline-block pb-1">Your Project,<br/> Our Passion</span>
               </h1>

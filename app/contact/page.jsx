@@ -41,9 +41,7 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-bold mb-1">Our Office</h4>
                       <p className="text-gray-600">
-                        123 Construction Ave
-                        <br />
-                        Building City, ST 12345
+                        Austin TX
                       </p>
                     </div>
                   </div>
@@ -53,8 +51,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-bold mb-1">Phone</h4>
                       <p className="text-gray-600">
-                        <a href="tel:+15551234567" className="hover:text-[rgb(var(--primary))]">
-                          (555) 123-4567
+                        <a href="tel:+15124314849" className="hover:text-[rgb(var(--primary))]">
+                          512-431-4849
                         </a>
                       </p>
                     </div>
@@ -65,8 +63,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-bold mb-1">Email</h4>
                       <p className="text-gray-600">
-                        <a href="mailto:info@arroconstruction.com" className="hover:text-[rgb(var(--primary))]">
-                          info@arroconstruction.com
+                        <a href="mailto:arirozen@arroconstruction.com" className="hover:text-[rgb(var(--primary))]">
+                          arirozen@arroconstruction.com
                         </a>
                       </p>
                     </div>
@@ -79,9 +77,6 @@ export default function ContactPage() {
                       <p className="text-gray-600">
                         Monday - Friday: 8am - 5pm
                         <br />
-                        Saturday: 9am - 2pm
-                        <br />
-                        Sunday: Closed
                       </p>
                     </div>
                   </div>
