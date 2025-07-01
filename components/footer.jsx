@@ -109,21 +109,21 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <MapPin className="mr-2 mt-1 flex-shrink-0" size={18} />
-                  <span>123 Construction Ave, Building City, ST 12345</span>
+                  <span>Austin TX</span>
                 </li>
                 <li className="flex items-center">
                   <Phone className="mr-2 flex-shrink-0" size={18} />
                   <a href="tel:+15551234567" className="hover:text-[rgb(var(--primary))] transition-colors">
-                    (555) 123-4567
+                    (555) 431-4849
                   </a>
                 </li>
                 <li className="flex items-center">
                   <Mail className="mr-2 flex-shrink-0" size={18} />
                   <a
-                    href="mailto:info@arroconstruction.com"
+                    href="mailto:arirozen@arroconstruction.com"
                     className="hover:text-[rgb(var(--primary))] transition-colors"
                   >
-                    info@arroconstruction.com
+                    arirozen@arroconstruction.com
                   </a>
                 </li>
               </ul>
