@@ -271,7 +271,7 @@ export default function ProjectsPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-64 rounded-lg overflow-hidden">
                   <Image
-                    src="/modern-home-construction.png"
+                    src="/Buda (1).jpg"
                     alt="Before"
                     loading="lazy"
                     width={300}
@@ -282,7 +282,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
                   <Image
-                    src="/open-concept-living-kitchen.png"
+                    src="/Buda (3).jpg"
                     alt="After"
                     loading="lazy"
                     width={300}
@@ -293,7 +293,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
                   <Image
-                    src="/bathroom-remodeling.webp"
+                    src="/Buda (7).jpg"
                     alt="Before"
                     loading="lazy"
                     width={300}
@@ -304,7 +304,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden">
                   <Image
-                    src="/finished-basement-entertainment.png"
+                    src="/Buda (5).jpg"
                     alt="After"
                     loading="lazy"
                     width={300}
