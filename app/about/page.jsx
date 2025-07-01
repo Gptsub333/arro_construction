@@ -20,7 +20,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Our Story
       <section className="section bg-gray-50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -68,7 +68,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <StaggeredChildren baseAnimation="animate-slide-up" staggerDelay={0.2} threshold={0.1}>
       {/* Leadership Profile */}
@@ -173,7 +173,7 @@ export default function AboutPage() {
 
 
       {/* Our Values */}
-      <section className="section">
+      {/* <section className="section">
         <div className="container">
           <AnimationWrapper animation="animate-fade-in" threshold={0.2}>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -230,7 +230,7 @@ export default function AboutPage() {
             </div>
           </StaggeredChildren>
         </div>
-      </section>
+      </section> */}
 
       <CTASection />
     </>
