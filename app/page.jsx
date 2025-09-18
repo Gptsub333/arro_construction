@@ -37,16 +37,13 @@
 
               <div>
                 <AnimationWrapper animation="animate-slide-left" threshold={0.2}>
-                  <h2 className="mb-6">Crafting Beautiful Spaces Since 2005</h2>
+                  {/* <h2 className="mb-6">Crafting Beautiful Spaces Since 2005</h2> */}
+                  <h2 className="mb-6">Who we are</h2>
                   <p className="text-gray-600 mb-6">
-                    At Arro Construction, we believe that your home should be a reflection of your unique style and needs.
-                    With over 15 years of experience in the industry, we've built a reputation for exceptional
-                    craftsmanship, attention to detail, and customer satisfaction.
+                    At ARRO Construction, we believe your home should be a true reflection of your style and needs. With more than 10 years of industry experience, we’ve built our reputation on exceptional craftsmanship, attention to detail, and a commitment to customer satisfaction.
                   </p>
                   <p className="text-gray-600 mb-8">
-                    Our team of skilled professionals is dedicated to bringing your vision to life, from concept to
-                    completion. We handle every aspect of your project with care and precision, ensuring a seamless
-                    experience and stunning results.
+                    Our team of skilled professionals is dedicated to bringing your vision to life—from concept to completion. Every aspect of your project is handled with care and precision, ensuring a seamless process and results that exceed expectations.
                   </p>
                 </AnimationWrapper>
 
@@ -62,7 +59,7 @@
                     <div className="flex items-start">
                       <Award className="text-[rgb(var(--primary))] mr-3 mt-1" size={20} />
                       <div>
-                        <h4 className="text-lg font-bold mb-1">Award Winning</h4>
+                        <h4 className="text-lg font-bold mb-1">Client Recognition</h4>
                         <p className="text-sm text-gray-600">Recognized for excellence in home remodeling.</p>
                       </div>
                     </div>

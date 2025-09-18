@@ -58,7 +58,8 @@ export default function ServicesSection({ limit = 3 }) {
       <div className="container">
         <AnimationWrapper animation="animate-fade-in" threshold={0.2}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="mb-4">Our Remodeling Services</h2>
+            {/* <h2 className="mb-4">Our Remodeling Services</h2> */}
+            <h2 className="mb-4">Our Commercial Services</h2>
             <p className="text-gray-600">
               We offer comprehensive remodeling services to transform any area of your home with quality craftsmanship
               and attention to detail.

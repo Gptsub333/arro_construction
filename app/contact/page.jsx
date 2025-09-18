@@ -87,12 +87,18 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-6">Service Areas</h3>
                 <p className="text-gray-600 mb-4">We proudly serve the following areas:</p>
                 <ul className="space-y-2 text-gray-600">
-                  <li>• Building City</li>
+                  {/* <li>• Building City</li>
                   <li>• Renovation Town</li>
                   <li>• Construction Heights</li>
                   <li>• Remodel Village</li>
                   <li>• Design Springs</li>
-                  <li>• And surrounding areas</li>
+                  <li>• And surrounding areas</li> */}
+                  <li>• Austin</li>
+                  <li>• Bee Cave</li>
+                  <li>• Lakeway</li>
+                  <li>• Roud Rock</li>
+                  <li>• Buda</li>
+                  <li>• Kyle</li>
                 </ul>
               </div>
             </div>

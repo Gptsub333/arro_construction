@@ -83,8 +83,9 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           <AnimationWrapper animation="animate-slide-down" delay={0.3}>
             <div className="mb-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="inline-block pb-1">Your Project,<br/> Our Passion</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                {/* <span className="inline-block pb-1">Your Project,<br/> Our Passion</span> */}
+                <span className="inline-block pb-1">Your Project, Our Passion</span>
               </h1>
             </div>
           </AnimationWrapper>
